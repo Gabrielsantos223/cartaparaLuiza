@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Luiza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-principal: #ff6b6b;
+            --cor-texto: #f8f8f8;
+            --cor-fundo: #121212;
+            --cor-destaque: #ff9e9e;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            height: 100%;
+            overflow: auto;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--cor-fundo);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--cor-texto);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 20%);
+        }
+        
+        .titulo-recomecar {
+            font-family: 'Parisienne', cursive;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: var(--cor-principal);
+            margin: 20px 0;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 3;
+        }
+        
+        .carta-amor {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            padding: clamp(20px, 5vw, 40px);
+            margin: 20px 0;
+            background-color: rgba(30, 30, 30, 0.85);
+            border: 1px solid var(--cor-principal);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.2);
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(5px);
+        }
+        
+        .carta-amor p {
+            margin-bottom: 1.5em;
+            text-align: left;
+            text-indent: 1em;
+        }
+        
+        .assinatura {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: clamp(1.5rem, 4vw, 1.8rem);
+            color: var(--cor-principal);
+            font-family: 'Parisienne', cursive;
+        }
+        
+        .contagem-regressiva {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            border: 1px solid var(--cor-principal);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .contagem-titulo {
+            font-family: 'Parisienne', cursive;
+            color: var(--cor-principal);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 15px;
+        }
+        
+        .contagem-numeros {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .contagem-item {
+            flex: 1;
+            min-width: 80px;
+        }
+        
+        .contagem-valor {
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            color: var(--cor-destaque);
+            font-weight: bold;
+        }
+        
+        .contagem-label {
+            font-size: clamp(0.8rem, 3vw, 1rem);
+            color: var(--cor-texto);
+            opacity: 0.8;
+        }
+        
+        .player-spotify {
+            margin: 40px 0;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        .coracao-fundo {
+            position: fixed;
+            color: hsla(0, 98%, 49%, 0.15);
+            font-size: clamp(5rem, 20vw, 15rem);
+            z-index: 1;
+            animation: flutuar 20s infinite linear;
+            pointer-events: none;
+        }
+        
+        .coracao1 { top: 10%; left: 5%; animation-delay: 0s; }
+        .coracao2 { top: 70%; right: 5%; animation-delay: 5s; }
+        .coracao3 { bottom: 10%; left: 20%; animation-delay: 10s; }
+        .coracao4 { top: 20%; right: 15%; animation-delay: 15s; }
+        
+        @keyframes flutuar {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+        }
+        
+        @media (max-width: 600px) {
+            .carta-amor {
+                padding: 15px;
+            }
+            
+            .contagem-item {
+                min-width: 70px;
+            }
+            
+            .player-spotify {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Corações de fundo -->
+    <div class="coracao-fundo coracao1">❤️</div>
+    <div class="coracao-fundo coracao2">❤️</div>
+    <div class="coracao-fundo coracao3">❤️</div>
+    <div class="coracao-fundo coracao4">❤️</div>
+    
+    <h1 class="titulo-recomecar">Podemos Recomeçar?</h1>
+    
+    <div class="carta-amor">
+        <p>Imagino q vc não esteja esperando essa msg e deve ser um surpresa enorme e deve estar falando q é mt cara de pau minha te mandar msg depois de todo esse tempo, então luiza eu não vivo sem você, sempre te amei e nunca apagou a chamas que está no meu coração, eu não tive maturidade para resolver nossos problemas e nunca faltou amor e sim maturidade esse tempo td q fiquei longe, aprendi mt coisas eu amadureci como pessoa e meu pensamento. dx de ser um mlk q sempre fez nós brigar, não te levar em casa, fazer você passar raiva, aprendi a conviver cmg mesmo pq se eu não consegui conviver com minha pessoa como vou me relacionar com alguém, eu penso em você todos os dias, o ônibus, creme, perfume, qualquer desenho já que vc faz uns bem bonitos, músicas, chocolate, monotrilho, primeiro dia de aula, bingo, bicicleta, eu nunca te esqueço e nunca te esqueci eu sei que te machuquei por imaturidade, você deve ter me xingado falado um monte de mim pras pessoas, mas nunca vou sentir raiva de ti pois sei que tudo foi apenas raiva, meus amigos me ensinaram a não sei orgulhoso e enquanto tiver razões para chorar por você eu vou tentar te reconquistar, o maicon, a Amanda, minha família, a sua família, não importa oque eles vão dizer, eu sempre vou te escolher, você é a mulher da minha vida, eu faço uma canção, poema, serenata, um site, cartas, presentes, tudo isso para te ter de volta e não quero que volte agora eu apenas quero uma chance para te reconquistar e espero que eu acenda um pouco de amor apenas para recomeçar, eu aprendi a gostar de sair de casa, não seria mais um problema, eu estou trabalhando e iríamos sair pois mts dos nossos problemas se resolveria assim, eu sei agora assumir todos meus erros, e enfrentar eles, eu vou te amar sempre Luiza eu nunca vou achar alguém igual a ti, sua alegria é unica, meu ciclo de amigos mudaram, meus gostos, meu estilo de roupas, meu corte de cabelo mudou, única coisa que não mudou foi meu amor por você eu te prometi diversas coisas e quero compri-las se você quiser que eu diga isso pessoalmente eu vou voando, você é única e a única que preenche meu peito, td que aconteceu deixa no passado, não precisa se entregar agora, seria como nois não se conhecesse eu quero recomeçar, e deixar tudo que aconteceu pra trás espero que você me ame até amanhã e caso você ja tenha alguém ou esteja cansada e não queira tentar, eu te desejo o melhor</p>
+        
+        <div class="assinatura">Com todo meu amor,<br>Bibi</div>
+    </div>
+
+    <!-- Contagem Regressiva -->
+    <div class="contagem-regressiva">
+        <div class="contagem-titulo">Nosso Recomeço em...</div>
+        <div class="contagem-numeros">
+            <div class="contagem-item">
+                <div class="contagem-valor" id="dias">00</div>
+                <div class="contagem-label">Dias</div>
+            </div>
+            <div class="contagem-item">
+                <div class="contagem-valor" id="horas">00</div>
+                <div class="contagem-label">Horas</div>
+            </div>
+            <div class="contagem-item">
+                <div class="contagem-valor" id="minutos">00</div>
+                <div class="contagem-label">Minutos</div>
+            </div>
+            <div class="contagem-item">
+                <div class="contagem-valor" id="segundos">00</div>
+                <div class="contagem-label">Segundos</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player do Spotify -->
+    <div class="player-spotify">
+        <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/track/3UStHHOyFXetR5621bKJBz?utm_source=generator&theme=0" 
+                width="100%" 
+                height="152" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+        </iframe>
+    </div>
+
+    <script>
+        // CONFIGURAÇÃO DA DATA ALVO - Edite esta linha!
+        const dataAlvo = new Date('2025-06-21T14:00:00').getTime();
+        
+        function atualizarContagem() {
+            const agora = new Date().getTime();
+            const diferenca = dataAlvo - agora;
+            
+            // Cálculos do tempo
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+            
+            // Atualiza os elementos HTML
+            document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+            document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+            document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+            document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+            
+            // Se a contagem terminar
+            if (diferenca < 0) {
+                clearInterval(intervalo);
+                document.querySelector('.contagem-titulo').textContent = "É hora do nosso recomeço!";
+                document.querySelector('.contagem-numeros').style.display = 'none';
+            }
+        }
+        
+        // Inicializa tudo
+        window.onload = function() {
+            atualizarContagem();
+        };
+        
+        // Atualiza a contagem a cada segundo
+        const intervalo = setInterval(atualizarContagem, 1000);
+    </script>
+</body>
+</html>
